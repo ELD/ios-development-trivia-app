@@ -43,41 +43,83 @@
                                     <action selector="previousQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bD6-YX-DNo"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8G-00-ORx">
+                                <rect key="frame" x="88" y="73" width="424" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xkp-2D-jvH">
+                                <rect key="frame" x="20" y="186" width="560" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lg9-ji-LPF">
+                                <rect key="frame" x="20" y="110" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="editingDidEndOnExit:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="Qqg-4R-a5D"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeC-2Y-tqv">
+                                <rect key="frame" x="248" y="148" width="104" height="30"/>
+                                <state key="normal" title="Submit Answer"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqS-VL-diT">
+                                <rect key="frame" x="20" y="102" width="560" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="cXs-qA-ZPC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="1Kz-Gy-d0B"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OfM-fV-e6h" secondAttribute="trailing" id="3pj-uc-Wza"/>
-                            <constraint firstItem="kpM-St-OoJ" firstAttribute="top" secondItem="cXs-qA-ZPC" secondAttribute="bottom" constant="8" id="CDn-AE-IJe"/>
-                            <constraint firstItem="OfM-fV-e6h" firstAttribute="top" secondItem="cXs-qA-ZPC" secondAttribute="bottom" constant="8" id="QYx-qO-KbK"/>
-                            <constraint firstItem="OfM-fV-e6h" firstAttribute="top" secondItem="cXs-qA-ZPC" secondAttribute="bottom" constant="8" id="UWC-VE-AjB"/>
-                            <constraint firstItem="OfM-fV-e6h" firstAttribute="top" secondItem="cXs-qA-ZPC" secondAttribute="bottom" constant="8" id="XmA-QS-xTS"/>
-                            <constraint firstItem="kpM-St-OoJ" firstAttribute="top" secondItem="cXs-qA-ZPC" secondAttribute="bottom" constant="8" id="ebC-E4-JfJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OfM-fV-e6h" secondAttribute="trailing" id="iQu-EE-Yoc"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="kpM-St-OoJ" secondAttribute="leading" id="jF1-BV-Chm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cXs-qA-ZPC" secondAttribute="trailing" id="lIX-zH-5bs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OfM-fV-e6h" secondAttribute="trailing" id="olD-4o-xbY"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="cXs-qA-ZPC" secondAttribute="leading" id="qfe-Ux-r4K"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="kpM-St-OoJ" secondAttribute="leading" id="wqk-6g-zZV"/>
+                            <constraint firstItem="OfM-fV-e6h" firstAttribute="trailing" secondItem="lg9-ji-LPF" secondAttribute="trailing" id="0Wn-uq-R9T"/>
+                            <constraint firstItem="cXs-qA-ZPC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="3ss-u3-YLT"/>
+                            <constraint firstItem="OeC-2Y-tqv" firstAttribute="centerX" secondItem="Xkp-2D-jvH" secondAttribute="centerX" id="3wY-CF-5HR"/>
+                            <constraint firstItem="kpM-St-OoJ" firstAttribute="top" secondItem="OfM-fV-e6h" secondAttribute="top" id="9fF-Bc-17M"/>
+                            <constraint firstItem="FqS-VL-diT" firstAttribute="top" secondItem="d8G-00-ORx" secondAttribute="bottom" constant="8" symbolic="YES" id="ErG-Cq-DZv"/>
+                            <constraint firstItem="FqS-VL-diT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Gc6-kh-Vd6"/>
+                            <constraint firstItem="FqS-VL-diT" firstAttribute="centerX" secondItem="lg9-ji-LPF" secondAttribute="centerX" id="Hft-Jq-5wD"/>
+                            <constraint firstItem="cXs-qA-ZPC" firstAttribute="trailing" secondItem="OfM-fV-e6h" secondAttribute="trailing" id="ICa-82-2pe"/>
+                            <constraint firstItem="Xkp-2D-jvH" firstAttribute="top" secondItem="OeC-2Y-tqv" secondAttribute="bottom" constant="8" symbolic="YES" id="RE3-1H-gzO"/>
+                            <constraint firstItem="cXs-qA-ZPC" firstAttribute="leading" secondItem="kpM-St-OoJ" secondAttribute="leading" id="SSe-gQ-VKE"/>
+                            <constraint firstItem="cXs-qA-ZPC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ug1-Hq-x8c"/>
+                            <constraint firstItem="OeC-2Y-tqv" firstAttribute="top" secondItem="lg9-ji-LPF" secondAttribute="bottom" constant="8" symbolic="YES" id="ZX3-h0-8Lh"/>
+                            <constraint firstItem="kpM-St-OoJ" firstAttribute="bottom" secondItem="d8G-00-ORx" secondAttribute="bottom" id="b4r-gW-WfM"/>
+                            <constraint firstItem="lg9-ji-LPF" firstAttribute="top" secondItem="FqS-VL-diT" secondAttribute="bottom" constant="8" symbolic="YES" id="d0i-32-23J"/>
+                            <constraint firstItem="kpM-St-OoJ" firstAttribute="top" secondItem="cXs-qA-ZPC" secondAttribute="bottom" constant="8" symbolic="YES" id="ehH-pC-DBb"/>
+                            <constraint firstItem="d8G-00-ORx" firstAttribute="leading" secondItem="FqS-VL-diT" secondAttribute="leading" constant="68" id="iEQ-a0-4AC"/>
+                            <constraint firstItem="cXs-qA-ZPC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iT0-Dz-9tw"/>
+                            <constraint firstItem="OfM-fV-e6h" firstAttribute="leading" secondItem="d8G-00-ORx" secondAttribute="trailing" constant="8" symbolic="YES" id="ryC-ld-uf0"/>
+                            <constraint firstItem="FqS-VL-diT" firstAttribute="trailing" secondItem="Xkp-2D-jvH" secondAttribute="trailing" id="u1s-c4-xmx"/>
+                            <constraint firstItem="kpM-St-OoJ" firstAttribute="leading" secondItem="lg9-ji-LPF" secondAttribute="leading" id="ye4-3a-cXQ"/>
+                            <constraint firstItem="FqS-VL-diT" firstAttribute="leading" secondItem="Xkp-2D-jvH" secondAttribute="leading" id="zkf-Ku-WpH"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="ebC-E4-JfJ"/>
-                                <exclude reference="wqk-6g-zZV"/>
-                                <exclude reference="3pj-uc-Wza"/>
-                                <exclude reference="UWC-VE-AjB"/>
-                                <exclude reference="XmA-QS-xTS"/>
-                                <exclude reference="iQu-EE-Yoc"/>
-                            </mask>
-                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="AJ1-Hz-J1G" appends="YES" id="0mQ-Sj-Ue5"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="answerField" destination="lg9-ji-LPF" id="WPI-xV-5qP"/>
+                        <outlet property="answerLabel" destination="Xkp-2D-jvH" id="BZj-XS-qet"/>
                         <outlet property="nextQuestionButton" destination="OfM-fV-e6h" id="lBo-uH-AEb"/>
                         <outlet property="previousQuestionButton" destination="kpM-St-OoJ" id="QV6-SL-y7A"/>
                         <outlet property="questionDifficultySegmentedControl" destination="cXs-qA-ZPC" id="zM6-Pc-k1x"/>
+                        <outlet property="questionText" destination="FqS-VL-diT" id="fRK-AW-qXv"/>
+                        <outlet property="scoreLabel" destination="d8G-00-ORx" id="35a-QG-8e4"/>
+                        <outlet property="submitButton" destination="OeC-2Y-tqv" id="GOq-ij-cjW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="AJ1-Hz-J1G">
+                    <connections>
+                        <action selector="onTapGestureRecognized:" destination="BYZ-38-t0r" id="OjA-cp-0lY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="305" y="429"/>
         </scene>
