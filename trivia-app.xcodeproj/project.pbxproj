@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A4510AFE1D81206A00E19F6A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4510AFD1D81206900E19F6A /* Question.swift */; };
+		A4510B001D81BF1800E19F6A /* TriviaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4510AFF1D81BF1800E19F6A /* TriviaManager.swift */; };
 		A47DE58A1D7F72AB0071D744 /* QuestionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47DE5891D7F72AB0071D744 /* QuestionList.swift */; };
 		A4E78B261D77DBF500343F51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E78B251D77DBF500343F51 /* AppDelegate.swift */; };
 		A4E78B281D77DBF500343F51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E78B271D77DBF500343F51 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		A4510AFD1D81206900E19F6A /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		A4510AFF1D81BF1800E19F6A /* TriviaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriviaManager.swift; sourceTree = "<group>"; };
 		A47DE5891D7F72AB0071D744 /* QuestionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionList.swift; sourceTree = "<group>"; };
 		A4E78B221D77DBF500343F51 /* trivia-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "trivia-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E78B251D77DBF500343F51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				A4E78B311D77DBF600343F51 /* Info.plist */,
 				A47DE5891D7F72AB0071D744 /* QuestionList.swift */,
 				A4510AFD1D81206900E19F6A /* Question.swift */,
+				A4510AFF1D81BF1800E19F6A /* TriviaManager.swift */,
 			);
 			path = "trivia-app";
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4510B001D81BF1800E19F6A /* TriviaManager.swift in Sources */,
 				A47DE58A1D7F72AB0071D744 /* QuestionList.swift in Sources */,
 				A4510AFE1D81206A00E19F6A /* Question.swift in Sources */,
 				A4E78B281D77DBF500343F51 /* ViewController.swift in Sources */,

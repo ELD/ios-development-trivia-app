@@ -9,13 +9,20 @@
 import Foundation
 import UIKit
 
+enum AnswerType {
+    case Alphabetic
+    case Numeric
+}
+
 class Question {
-    private var question = ""
-    private var answer = ""
+    private var question: String
+    private var answer: String
+    private var answerType: AnswerType
     
-    init(question: String, answer: String) {
+    init(question: String, answer: String, answerType: AnswerType) {
         self.question = question
         self.answer = answer
+        self.answerType = answerType
     }
     
     func getQuestion() -> String {
@@ -29,5 +36,9 @@ class Question {
     func checkAnswer(userAnswer: String) -> Bool {
         // TODO
         return false
+    }
+    
+    func getAnswerType() -> AnswerType {
+        return self.answerType
     }
 }

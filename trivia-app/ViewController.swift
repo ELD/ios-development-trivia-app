@@ -18,20 +18,55 @@ class ViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var answerField: UITextField!
     
-    let qList: QuestionCollection = QuestionCollection.init()
+    let triviaManager = TriviaManager.init()
     var questionDifficulty = "Easy"
     
     @IBAction func questionDifficultyChanged(sender: UISegmentedControl) {
         questionDifficulty = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)!
-        print("Question difficulty changed to \(questionDifficulty)")
+        let (question, alreadyAnswered) = triviaManager.getQuestions().currentQuestion(
+            Difficulty.fromString(questionDifficulty)!
+        )
+        
+        resetAnswerLabel()
+        changeQuestionText(question.getQuestion())
+        changeKeyboardType(question.getAnswerType())
+        setInputStateAndDisplayAnswer(alreadyAnswered, question: question)
     }
     
     @IBAction func previousQuestion(sender: UIButton) {
-        changeQuestionText(qList.previousQuestion(questionDifficulty))
+        resetAnswerLabel()
+        let (question, alreadyAnswered) = triviaManager.getQuestions().previousQuestion(
+            Difficulty.fromString(questionDifficulty)!
+        )
+        
+        changeQuestionText(question.getQuestion())
+        changeKeyboardType(question.getAnswerType())
+        setInputStateAndDisplayAnswer(alreadyAnswered, question: question)
     }
     
     @IBAction func nextQuestion(sender: UIButton) {
-        changeQuestionText(qList.nextQuestion(questionDifficulty))
+        if (!triviaManager.getQuestions().hasMoreQuestions(Difficulty.fromString(questionDifficulty)!)) {
+            let alert = UIAlertController(title: "", message: "No more questions of this difficulty exist.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(
+                UIAlertAction(
+                    title: "Ok",
+                    style: UIAlertActionStyle.Default,
+                    handler: nil
+                )
+            )
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        
+        resetAnswerLabel()
+        let (question, alreadyAnswered) = triviaManager.getQuestions().nextQuestion(
+            Difficulty.fromString(questionDifficulty)!
+        )
+        
+        changeQuestionText(question.getQuestion())
+        changeKeyboardType(question.getAnswerType())
+        setInputStateAndDisplayAnswer(alreadyAnswered, question: question)
     }
     
     @IBAction func onTapGestureRecognized(sender: UITapGestureRecognizer) {
@@ -41,9 +76,49 @@ class ViewController: UIViewController {
     @IBAction func editingDidEndOnExit(sender: UITextField) {
         sender.resignFirstResponder()
     }
+
+    @IBAction func submitAnswer(sender: UIButton) {
+        answerField.resignFirstResponder()
+        
+        let difficulty = Difficulty.fromString(questionDifficulty)!
+        let answer = answerField.text!
+        
+        let result = triviaManager.checkAnswer(difficulty, answer: answer)
+        answerField.enabled = false
+        updateAnswerAndScore(result)
+    }
     
     private func changeQuestionText(questionText: String) {
         self.questionText.text = questionText
+    }
+    
+    private func changeKeyboardType(answerType: AnswerType) {
+        switch answerType {
+        case .Alphabetic:
+            answerField.keyboardType = UIKeyboardType.Alphabet
+        case .Numeric:
+            answerField.keyboardType = UIKeyboardType.NumberPad
+        }
+    }
+    
+    private func setInputStateAndDisplayAnswer(alreadyAnswered: Bool, question: Question) {
+        answerField.text = nil
+        answerField.placeholder = "Answer..."
+        answerField.enabled = !alreadyAnswered
+        
+        if alreadyAnswered {
+            answerField.placeholder = "You already answered this question"
+            answerLabel.text = "You already answered this question.\nAnswer: " + question.getAnswer()
+        }
+    }
+    
+    private func updateAnswerAndScore(answerString: String) {
+        scoreLabel.text = "Score: " + String(triviaManager.getScore())
+        answerLabel.text = answerString
+    }
+    
+    private func resetAnswerLabel() {
+        answerLabel.text = ""
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -70,6 +145,14 @@ class ViewController: UIViewController {
         )
         
         self.presentViewController(alert, animated: true, completion: nil)
+        
+        let (question, alreadyAnswered) = triviaManager.getQuestions().currentQuestion(
+            Difficulty.fromString(questionDifficulty)!
+        )
+        
+        changeQuestionText(question.getQuestion())
+        changeKeyboardType(question.getAnswerType())
+        setInputStateAndDisplayAnswer(alreadyAnswered, question: question)
     }
     
 }
