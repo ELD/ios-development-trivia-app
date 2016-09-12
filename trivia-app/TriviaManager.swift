@@ -63,9 +63,14 @@ class TriviaManager {
     
     private func checkNumericAnswer(expected: String, actual: String, difficulty: Difficulty) -> String {
         var response = "That's not right... The actual answer was: " + expected
+        var trimmedActual = actual.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        
+        if trimmedActual == "" {
+            trimmedActual = "0.0"
+        }
         
         let numericExpected = Float64(expected)!
-        let numericActual = Float64(actual)!
+        let numericActual = Float64(trimmedActual)!
         
         if numericActual > numericExpected - numericExpected * 0.05 &&
             numericActual < numericExpected + numericExpected * 0.05 {
