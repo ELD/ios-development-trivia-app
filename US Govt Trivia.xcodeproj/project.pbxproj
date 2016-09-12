@@ -44,7 +44,7 @@
 		A4E78B191D77DBF500343F51 = {
 			isa = PBXGroup;
 			children = (
-				A4E78B241D77DBF500343F51 /* trivia-app */,
+				A4E78B241D77DBF500343F51 /* US Govt Trivia */,
 				A4E78B231D77DBF500343F51 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,7 +57,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A4E78B241D77DBF500343F51 /* trivia-app */ = {
+		A4E78B241D77DBF500343F51 /* US Govt Trivia */ = {
 			isa = PBXGroup;
 			children = (
 				A4E78B251D77DBF500343F51 /* AppDelegate.swift */,
@@ -70,6 +70,7 @@
 				A4510AFD1D81206900E19F6A /* Question.swift */,
 				A4510AFF1D81BF1800E19F6A /* TriviaManager.swift */,
 			);
+			name = "US Govt Trivia";
 			path = "trivia-app";
 			sourceTree = "<group>";
 		};
