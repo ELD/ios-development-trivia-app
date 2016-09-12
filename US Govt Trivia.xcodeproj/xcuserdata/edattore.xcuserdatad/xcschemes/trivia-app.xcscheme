@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A4E78B211D77DBF500343F51"
-               BuildableName = "trivia-app.app"
-               BlueprintName = "trivia-app"
-               ReferencedContainer = "container:trivia-app.xcodeproj">
+               BuildableName = "US Govt Trivia.app"
+               BlueprintName = "US Govt Trivia"
+               ReferencedContainer = "container:US Govt Trivia.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A4E78B211D77DBF500343F51"
-            BuildableName = "trivia-app.app"
-            BlueprintName = "trivia-app"
-            ReferencedContainer = "container:trivia-app.xcodeproj">
+            BuildableName = "US Govt Trivia.app"
+            BlueprintName = "US Govt Trivia"
+            ReferencedContainer = "container:US Govt Trivia.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A4E78B211D77DBF500343F51"
-            BuildableName = "trivia-app.app"
-            BlueprintName = "trivia-app"
-            ReferencedContainer = "container:trivia-app.xcodeproj">
+            BuildableName = "US Govt Trivia.app"
+            BlueprintName = "US Govt Trivia"
+            ReferencedContainer = "container:US Govt Trivia.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A4E78B211D77DBF500343F51"
-            BuildableName = "trivia-app.app"
-            BlueprintName = "trivia-app"
-            ReferencedContainer = "container:trivia-app.xcodeproj">
+            BuildableName = "US Govt Trivia.app"
+            BlueprintName = "US Govt Trivia"
+            ReferencedContainer = "container:US Govt Trivia.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

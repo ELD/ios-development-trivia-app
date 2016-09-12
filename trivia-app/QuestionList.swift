@@ -42,17 +42,20 @@ class QuestionCollection {
             (Question.init(
                 question: "How many members are in the House of Representatives?",
                 answer: "435",
-                answerType: .Numeric
+                answerType: .Numeric,
+                imagePath: "house"
             ), false),
             (Question.init(
                 question: "How many members are in the Senate?",
                 answer: "100",
-                answerType: .Numeric
+                answerType: .Numeric,
+                imagePath: "senate"
             ), false),
             (Question.init(
                 question: "Who's the Governor of Colorado?",
                 answer: "John Hickenlooper",
-                answerType: .Alphabetic
+                answerType: .Alphabetic,
+                imagePath: "john_hickenlooper"
             ), false)
         ]
         
@@ -60,17 +63,20 @@ class QuestionCollection {
             (Question.init(
                 question: "What is the term length (in years) for a member of the House of Representatives?",
                 answer: "2",
-                answerType: .Numeric
+                answerType: .Numeric,
+                imagePath: "house"
             ), false),
             (Question.init(
                 question: "What's the age requirement to serve as the President",
                 answer: "35",
-                answerType: .Numeric
+                answerType: .Numeric,
+                imagePath: "president"
             ), false),
             (Question.init(
                 question: "Who is the Chief Justice of the United States?",
                 answer: "John Roberts",
-                answerType: .Alphabetic
+                answerType: .Alphabetic,
+                imagePath: "john_roberts"
             ), false),
         ]
         
@@ -78,22 +84,26 @@ class QuestionCollection {
             (Question.init(
                 question: "What is the upper house of the United States Congress?",
                 answer: "Senate",
-                answerType: .Alphabetic
+                answerType: .Alphabetic,
+                imagePath: "capitol"
             ), false),
             (Question.init(
                 question: "Who is fourth in line of presidential succession?",
                 answer: "Secretary of State",
-                answerType: .Alphabetic
+                answerType: .Alphabetic,
+                imagePath: "white_house"
             ), false),
             (Question.init(
                 question: "What Federal Department is NOAA under?",
                 answer: "Department of Commerce",
-                answerType: .Alphabetic
+                answerType: .Alphabetic,
+                imagePath: "noaa"
             ), false),
             (Question.init(
                 question: "How many votes does a Cloture motion require?",
                 answer: "60",
-                answerType: .Numeric
+                answerType: .Numeric,
+                imagePath: "senate"
             ), false),
         ]
     }

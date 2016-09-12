@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:trivia-app.xcodeproj">
+      location = "self:/Users/edattore/Dev/Xcode/ios-development-class/trivia-app/US Govt Trivia.xcodeproj">
    </FileRef>
 </Workspace>

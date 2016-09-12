@@ -21,7 +21,7 @@
 		A4510AFD1D81206900E19F6A /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		A4510AFF1D81BF1800E19F6A /* TriviaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriviaManager.swift; sourceTree = "<group>"; };
 		A47DE5891D7F72AB0071D744 /* QuestionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionList.swift; sourceTree = "<group>"; };
-		A4E78B221D77DBF500343F51 /* trivia-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "trivia-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E78B221D77DBF500343F51 /* US Govt Trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "US Govt Trivia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E78B251D77DBF500343F51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4E78B271D77DBF500343F51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A4E78B2A1D77DBF500343F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		A4E78B231D77DBF500343F51 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A4E78B221D77DBF500343F51 /* trivia-app.app */,
+				A4E78B221D77DBF500343F51 /* US Govt Trivia.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A4E78B211D77DBF500343F51 /* trivia-app */ = {
+		A4E78B211D77DBF500343F51 /* US Govt Trivia */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A4E78B341D77DBF600343F51 /* Build configuration list for PBXNativeTarget "trivia-app" */;
+			buildConfigurationList = A4E78B341D77DBF600343F51 /* Build configuration list for PBXNativeTarget "US Govt Trivia" */;
 			buildPhases = (
 				A4E78B1E1D77DBF500343F51 /* Sources */,
 				A4E78B1F1D77DBF500343F51 /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = "trivia-app";
+			name = "US Govt Trivia";
 			productName = "trivia-app";
-			productReference = A4E78B221D77DBF500343F51 /* trivia-app.app */;
+			productReference = A4E78B221D77DBF500343F51 /* US Govt Trivia.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -109,7 +109,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A4E78B1D1D77DBF500343F51 /* Build configuration list for PBXProject "trivia-app" */;
+			buildConfigurationList = A4E78B1D1D77DBF500343F51 /* Build configuration list for PBXProject "US Govt Trivia" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -122,7 +122,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A4E78B211D77DBF500343F51 /* trivia-app */,
+				A4E78B211D77DBF500343F51 /* US Govt Trivia */,
 			);
 		};
 /* End PBXProject section */
@@ -266,8 +266,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "trivia-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.buildev.trivia-app";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.buildev.american-govt-trivia";
+				PRODUCT_NAME = "US Govt Trivia";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -280,8 +280,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "trivia-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.buildev.trivia-app";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.buildev.american-govt-trivia";
+				PRODUCT_NAME = "US Govt Trivia";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -289,7 +289,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A4E78B1D1D77DBF500343F51 /* Build configuration list for PBXProject "trivia-app" */ = {
+		A4E78B1D1D77DBF500343F51 /* Build configuration list for PBXProject "US Govt Trivia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A4E78B321D77DBF600343F51 /* Debug */,
@@ -298,7 +298,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A4E78B341D77DBF600343F51 /* Build configuration list for PBXNativeTarget "trivia-app" */ = {
+		A4E78B341D77DBF600343F51 /* Build configuration list for PBXNativeTarget "US Govt Trivia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A4E78B351D77DBF600343F51 /* Debug */,

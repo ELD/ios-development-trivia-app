@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 enum AnswerType {
     case Alphabetic
@@ -18,11 +17,13 @@ class Question {
     private var question: String
     private var answer: String
     private var answerType: AnswerType
+    private var imagePath: String
     
-    init(question: String, answer: String, answerType: AnswerType) {
+    init(question: String, answer: String, answerType: AnswerType, imagePath: String) {
         self.question = question
         self.answer = answer
         self.answerType = answerType
+        self.imagePath = imagePath
     }
     
     func getQuestion() -> String {
@@ -33,12 +34,11 @@ class Question {
         return self.answer
     }
     
-    func checkAnswer(userAnswer: String) -> Bool {
-        // TODO
-        return false
-    }
-    
     func getAnswerType() -> AnswerType {
         return self.answerType
+    }
+    
+    func getImagePath() -> String {
+        return self.imagePath
     }
 }

@@ -29,14 +29,13 @@ class TriviaManager {
     
     func checkAnswer(difficulty: Difficulty, answer: String) -> String {
         let (question, _) = questions.currentQuestion(difficulty)
-        let actualAnswer = question.getAnswer().lowercaseString
         var response = ""
         
         switch question.getAnswerType() {
         case .Alphabetic:
-            response = checkAlphabeticAnswer(question.getAnswer(), actual: actualAnswer, difficulty: difficulty)
+            response = checkAlphabeticAnswer(question.getAnswer(), actual: answer, difficulty: difficulty)
         case .Numeric:
-            response = checkNumericAnswer(question.getAnswer(), actual: actualAnswer, difficulty: difficulty)
+            response = checkNumericAnswer(question.getAnswer(), actual: answer, difficulty: difficulty)
         }
         
         answerQuestion(difficulty, newQ: (question, true))
@@ -48,10 +47,13 @@ class TriviaManager {
     }
     
     private func checkAlphabeticAnswer(expected: String, actual: String, difficulty: Difficulty) -> String {
+        let trimmedActual = actual
+            .stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        
         var response = "That's not right... The actual answer was: " + expected
         
-        if expected.lowercaseString.containsString(actual.lowercaseString) &&
-            actual.characters.count >= expected.characters.count {
+        if expected.lowercaseString.containsString(trimmedActual.lowercaseString) &&
+            actual.characters.count >= 5 {
             incrementScore(difficulty)
             response = "That's correct (or close)! The actual answer was: " + expected
         }

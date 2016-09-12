@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var answerField: UITextField!
+    @IBOutlet weak var imageField: UIImageView!
     
     let triviaManager = TriviaManager.init()
     var questionDifficulty = "Easy"
@@ -29,6 +30,7 @@ class ViewController: UIViewController {
         
         resetAnswerLabel()
         changeQuestionText(question.getQuestion())
+        changeImage(question.getImagePath())
         changeKeyboardType(question.getAnswerType())
         setInputStateAndDisplayAnswer(alreadyAnswered, question: question)
     }
@@ -40,6 +42,7 @@ class ViewController: UIViewController {
         )
         
         changeQuestionText(question.getQuestion())
+        changeImage(question.getImagePath())
         changeKeyboardType(question.getAnswerType())
         setInputStateAndDisplayAnswer(alreadyAnswered, question: question)
     }
@@ -65,6 +68,7 @@ class ViewController: UIViewController {
         )
         
         changeQuestionText(question.getQuestion())
+        changeImage(question.getImagePath())
         changeKeyboardType(question.getAnswerType())
         setInputStateAndDisplayAnswer(alreadyAnswered, question: question)
     }
@@ -121,6 +125,10 @@ class ViewController: UIViewController {
         answerLabel.text = ""
     }
     
+    private func changeImage(imagePath: String) {
+        imageField.image = UIImage(imageLiteral: imagePath)
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -151,6 +159,7 @@ class ViewController: UIViewController {
         )
         
         changeQuestionText(question.getQuestion())
+        changeImage(question.getImagePath())
         changeKeyboardType(question.getAnswerType())
         setInputStateAndDisplayAnswer(alreadyAnswered, question: question)
     }
